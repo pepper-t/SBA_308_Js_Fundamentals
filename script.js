@@ -6,6 +6,15 @@ const CourseInfo = {
   name: "Introduction to JavaScript"
 };
 
+//I need to check if the course id is 451. I will use a while loop to do determine if the course id is correct.
+while (AssignmentGroup.course_id === CourseInfo.id) {
+  AssignmentGroup.course_id ++;
+  console.log(`correct course id`);
+  if (AssignmentGroup.course_id !== CourseInfo.id) {
+   break;
+}
+  console.log(`incorrect course id`);
+}
 
 // The provided assignment group.
 const AssignmentGroup = {
@@ -89,14 +98,8 @@ let avg=ag;
 
 //const possiblePoints=  (ag?.assignments?.[0]?.points_possible || 0) + (ag?.assignments?.[1]?.points_possible || 0);
 //const totalScore=(submissions?.[3]?.score || 0) + (submissions?.[1]?.score || 0);
-let course=CourseInfo;
-while (course===451) {
-  console.log(`correct course id`);
-  if (course!==451) {
-   break;
-}
-  console.log(false`inccorect course id`);
-}
+
+
 let submissions=LearnerSubmissions;
 const possiblePoints=AssignmentGroup.assignments[0].points_possible + AssignmentGroup.assignments[1].points_possible;//(50 + 150)
 const totalScore = LearnerSubmissions[3].score + LearnerSubmissions[1].score;//(47 + 150)
@@ -228,7 +231,7 @@ if (totalScore=LearnerSubmissions[1]?.score)//to avoid error
   ];
 
   return result;
-}
+
 
 const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
 
