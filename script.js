@@ -44,6 +44,13 @@ const AssignmentGroup = {
   ]
 };
 
+currentDate = new Date(); //get the current date
+
+const dueAssignments = AssignmentGroup.assignments.filter(assignment);{
+  const dueDate = new Date(assignment.due_at);
+  return dueDate <= currentDate;
+}
+
 
 
 
@@ -92,7 +99,9 @@ const LearnerSubmissions = [
 ];
 
 getLearnerData;//getLearnerData is open to recieving any input data from above
-let avg=ag;
+
+
+
 
 
 
